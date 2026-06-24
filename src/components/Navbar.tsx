@@ -1,22 +1,35 @@
-function Navbar() {
+type NavbarProps = {
+  theme: "light" | "dark";
+  toggleTheme: () => void;
+};
+
+function Navbar({ theme, toggleTheme }: NavbarProps) {
   return (
-    <header className="rounded-2xl  bg-orange-200 shadow-xl">
-      <div className="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
+    <header className="rounded-2xl p-6 bg-[#b89d72]  dark:bg-zinc-800 transition-colors duration-300">
+      <div className="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between ">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900">
+          <h1 className="text-2xl font-bold text-zinc-800 dark:text-white">
             Personal Finance Dashboard
           </h1>
 
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
             Manage your income and expenses efficiently.
           </p>
         </div>
 
         <button
-          type="button"
-          className="rounded-lg bg-gray-300 border border-slate-500 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-blue-400 cursor-pointer"
+          onClick={toggleTheme}
+          className="
+          rounded-lg
+          border
+          px-4
+          py-2
+          transition
+          duration-300
+          cursor-pointer
+        "
         >
-          Theme Toggle
+          {theme === "light" ? "🌙 Dark" : "☀️ Light"}
         </button>
       </div>
     </header>
