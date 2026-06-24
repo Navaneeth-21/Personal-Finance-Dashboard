@@ -5,11 +5,11 @@ type TransactionSortProps = {
 
 function TransactionSort({ sortOption, onSortChange }: TransactionSortProps) {
   return (
-    <section className="mt-4">
+    <section className="mt-4 transition-colors duration-300">
       <select
         value={sortOption}
         onChange={(event) => onSortChange(event.target.value)}
-        className=" rounded-lg text-sm font-medium border border-slate-300 bg-white px-4 py-2 outline-none focus:border-slate-900"
+        className=" rounded-lg text-sm font-medium border border-slate-300 bg-white px-4 py-2 outline-none focus:border-slate-900 dark:bg-zinc-800"
       >
         <option value="date-desc">Newest First</option>
 
