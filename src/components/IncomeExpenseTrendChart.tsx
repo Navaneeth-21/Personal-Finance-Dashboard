@@ -65,13 +65,13 @@ function IncomeExpenseTrendChart({
     .sort((a, b) => a.monthIndex - b.monthIndex);
 
   return (
-    <section className="rounded-2xl bg-white p-6 shadow-sm">
-      <h2 className="mb-6 text-xl font-semibold text-slate-900">
+    <section className="rounded-2xl bg-white p-6 shadow-sm dark:bg-zinc-800 transition-colors duration-300">
+      <h2 className="mb-6 text-xl font-semibold text-slate-800 dark:text-white">
         Income vs Expense Trend
       </h2>
 
       {chartData.length === 0 ? (
-        <div className="flex h-75 items-center justify-center text-slate-500">
+        <div className="flex h-75 items-center justify-center text-zinc-500 dark:text-white">
           No trend data available
         </div>
       ) : (

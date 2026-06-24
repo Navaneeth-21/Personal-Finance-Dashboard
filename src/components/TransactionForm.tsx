@@ -87,8 +87,8 @@ const TransactionForm = ({
   };
 
   return (
-    <section className="mt-7 rounded-2xl bg-mauve-200 px-6 shadow-sm">
-      <h2 className=" mt-8 text-xl font-semibold text-slate-900">
+    <section className="mt-7 rounded-2xl bg-mauve-200 px-6 shadow-sm dark:bg-zinc-800 transition-colors duration-300">
+      <h2 className=" mt-10 text-xl font-semibold text-slate-900 dark:text-white">
         Add Transaction
       </h2>
 
@@ -96,7 +96,7 @@ const TransactionForm = ({
         <div>
           <label
             htmlFor="title"
-            className="mb-2 block text-sm font-medium text-slate-700"
+            className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-400"
           >
             Title
           </label>
@@ -111,7 +111,7 @@ const TransactionForm = ({
               }))
             }
             placeholder="e.g. Salary"
-            className={`w-full rounded-lg border px-4 py-2 outline-none focus:border-slate-900 ${errors.title ? "border-red-500" : "border-slate-300"}`}
+            className={`w-full rounded-lg border px-4 py-2 outline-none focus:border-slate-900 ${errors.title ? "border-red-500" : "border-slate-400"}`}
           />
 
           {errors.title && (
@@ -121,7 +121,7 @@ const TransactionForm = ({
         <div>
           <label
             htmlFor="amount"
-            className="mb-2 block text-sm font-medium text-slate-700"
+            className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-400"
           >
             Amount
           </label>
@@ -136,7 +136,7 @@ const TransactionForm = ({
               }))
             }
             placeholder="e.g. 50000"
-            className={`w-full rounded-lg border  px-4 py-2 outline-none focus:border-slate-900 ${errors.amount ? "border-red-500" : "border-slate-300"}`}
+            className={`w-full rounded-lg border  px-4 py-2 outline-none focus:border-slate-900 ${errors.amount ? "border-red-500" : "border-slate-400"}`}
           />
 
           {errors.amount && (
@@ -146,7 +146,7 @@ const TransactionForm = ({
         <div>
           <label
             htmlFor="category"
-            className="mb-2 block text-sm font-medium text-slate-700"
+            className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-400"
           >
             Category
           </label>
@@ -161,7 +161,7 @@ const TransactionForm = ({
               }))
             }
             placeholder="e.g. Food"
-            className={`w-full rounded-lg border  px-4 py-2 outline-none focus:border-slate-900 ${errors.category ? "border-red-500" : "border-slate-300"}`}
+            className={`w-full rounded-lg border  px-4 py-2 outline-none focus:border-slate-900 ${errors.category ? "border-red-500" : "border-slate-400"}`}
           />
           {errors.category && (
             <p className="mt-1 text-sm text-red-500">{errors.category}</p>
@@ -170,7 +170,7 @@ const TransactionForm = ({
         <div>
           <label
             htmlFor="type"
-            className="mb-2 block text-sm font-medium text-slate-700"
+            className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-400"
           >
             Type
           </label>
@@ -183,7 +183,7 @@ const TransactionForm = ({
                 type: event.target.value as "Income" | "Expenses",
               }))
             }
-            className="w-full rounded-lg border border-slate-300 px-4 py-2 outline-none focus:border-slate-900"
+            className="w-full rounded-lg border border-slate-400 px-4 py-2 outline-none focus:border-slate-900"
           >
             <option value="Income">Income</option>
             <option value="Expenses">Expenses</option>
@@ -192,7 +192,7 @@ const TransactionForm = ({
         <div>
           <label
             htmlFor="date"
-            className="mb-2 block text-sm font-medium text-slate-700"
+            className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-400"
           >
             Date
           </label>
@@ -206,7 +206,7 @@ const TransactionForm = ({
                 date: event.target.value,
               }))
             }
-            className={`w-full rounded-lg border  px-4 py-2 focus:border-slate-900 ${errors.date ? "border-red-500" : "border-slate-300"}`}
+            className={`w-full rounded-lg border  px-4 py-2 focus:border-slate-900 ${errors.date ? "border-red-500" : "border-slate-400"}`}
           />
 
           {errors.date && (

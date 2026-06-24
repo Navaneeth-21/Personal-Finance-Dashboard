@@ -38,13 +38,13 @@ function MonthlyExpenseChart({ transactions }: MonthlyExpenseChartProps) {
   }));
 
   return (
-    <section className="rounded-2xl bg-white p-6 shadow-sm">
-      <h2 className="mb-6 text-xl font-semibold text-slate-900">
+    <section className="rounded-2xl bg-white p-6 shadow-sm dark:bg-zinc-800 transition-colors duration-300">
+      <h2 className="mb-6 text-xl font-semibold text-zinc-900 dark:text-white">
         Monthly Expenses
       </h2>
 
       {chartData.length === 0 ? (
-        <div className="flex h-75 items-center justify-center text-slate-500">
+        <div className="flex h-75 items-center justify-center text-zinc-500 dark:text-white">
           No monthly expense data available
         </div>
       ) : (
