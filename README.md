@@ -67,7 +67,11 @@ A modern and responsive Personal Finance Dashboard built with React, TypeScript,
 
 ## 📂 Project Structure
 
+<<<<<<< HEAD
 - Included only main files
+=======
+ - Included only main files
+>>>>>>> 66f256e76e149eda93ed74668db8073bfe704572
 
 ```text
 src
