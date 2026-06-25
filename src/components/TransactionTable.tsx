@@ -21,23 +21,31 @@ const TransactionTable = ({
   }
 
   return (
-    <section className="mt-8 rounded-2xl bg-cyan-200 p-6 shadow-sm">
-      <h2 className="text-xl font-semibold text-slate-900">Transactions</h2>
+    <section className="mt-8 rounded-2xl bg-[#d7e5e5] p-6 shadow-sm dark:bg-zinc-800 transition-colors duration-300">
+      <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
+        Transactions
+      </h2>
 
       <div className="mt-6 overflow-x-auto">
-        <table className="min-w-full">
+        <table className="min-w-full ">
           <thead>
             <tr className="border-b border-slate-400 text-left">
-              <th className="pb-3 pr-4 font-semibold text-slate-700 ">Title</th>
-              <th className="pb-3 pr-4 font-semibold text-slate-700 ">
+              <th className="pb-3 pr-4 font-semibold  dark:text-slate-400 ">
+                Title
+              </th>
+              <th className="pb-3 pr-4 font-semibold  dark:text-slate-400 ">
                 Amount
               </th>
-              <th className="pb-3 pr-4 font-semibold text-slate-700 ">
+              <th className="pb-3 pr-4 font-semibold  dark:text-slate-400 ">
                 Category
               </th>
-              <th className="pb-3 pr-4 font-semibold text-slate-700 ">Type</th>
-              <th className="pb-3 pr-4 font-semibold text-slate-700 ">Date</th>
-              <th className="pb-3 px-2 font-semibold text-slate-700 ">
+              <th className="pb-3 pr-4 font-semibold  dark:text-slate-400 ">
+                Type
+              </th>
+              <th className="pb-3 pr-4 font-semibold  dark:text-slate-400 ">
+                Date
+              </th>
+              <th className="pb-3 px-2 font-semibold  dark:text-slate-400 ">
                 Actions
               </th>
             </tr>
@@ -45,17 +53,21 @@ const TransactionTable = ({
           <tbody>
             {transactions.map((transaction) => (
               <tr key={transaction.id} className="border-b border-slate-400">
-                <td className="py-4 pr-4 text-slate-700">
+                <td className="py-4 pr-4 dark:text-slate-100">
                   {transaction.title}
                 </td>
-                <td className="py-4 pr-4 text-slate-700">
+                <td className="py-4 pr-4 dark:text-slate-100">
                   ₹{transaction.amount}
                 </td>
-                <td className="py-4 pr-4 text-slate-700">
+                <td className="py-4 pr-4 dark:text-slate-100">
                   {transaction.category}
                 </td>
-                <td className="py-4 pr-4 text-slate-700">{transaction.type}</td>
-                <td className="py-4 pr-4 text-slate-700">{transaction.date}</td>
+                <td className="py-4 pr-4 dark:text-slate-100">
+                  {transaction.type}
+                </td>
+                <td className="py-4 pr-4 dark:text-slate-100">
+                  {transaction.date}
+                </td>
                 <td className="py-4">
                   <div className="flex gap-3">
                     <button
