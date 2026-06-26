@@ -21,7 +21,7 @@ const TransactionTable = ({
   }
 
   return (
-    <section className="mt-8 rounded-2xl bg-[#d7e5e5] p-6 shadow-sm dark:bg-zinc-800 transition-colors duration-300">
+    <section className="mt-8 rounded-2xl bg-[#d7e5e5] p-6 shadow-sm dark:bg-slate-800 transition-colors duration-300">
       <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
         Transactions
       </h2>

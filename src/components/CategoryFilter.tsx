@@ -15,7 +15,7 @@ function CategoryFilter({
         onClick={() => onCategoryChange("All")}
         className={`rounded-lg px-4 py-2 text-sm font-medium cursor-pointer transition ${
           selectedCategory === "All"
-            ? "bg-slate-900 text-white dark:bg-zinc-800"
+            ? "bg-slate-900 text-white dark:bg-slate-900"
             : "bg-white text-slate-700 border border-slate-300"
         }`}
       >
@@ -28,7 +28,7 @@ function CategoryFilter({
           onClick={() => onCategoryChange(category)}
           className={`rounded-lg px-4 py-2 text-sm font-medium cursor-pointer transition ${
             selectedCategory === category
-              ? "bg-slate-900 text-white dark:bg-zinc-800"
+              ? "bg-slate-900 text-white dark:bg-slate-900"
               : "bg-white text-slate-700 border border-slate-300"
           }`}
         >

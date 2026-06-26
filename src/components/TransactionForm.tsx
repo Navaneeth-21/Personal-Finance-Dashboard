@@ -87,7 +87,7 @@ const TransactionForm = ({
   };
 
   return (
-    <section className="mt-7 rounded-2xl bg-mauve-200 px-6 shadow-sm dark:bg-zinc-800 transition-colors duration-300">
+    <section className="mt-7 rounded-2xl bg-mauve-200 px-6 shadow-sm dark:bg-slate-800 transition-colors duration-300">
       <h2 className=" mt-10 text-xl font-semibold text-slate-900 dark:text-white">
         Add Transaction
       </h2>
