@@ -12,6 +12,11 @@ import TransactionSearch from "../components/TransactionSearch";
 import CategoryFilter from "../components/CategoryFilter";
 import TransactionSort from "../components/TransactionSort";
 import Pagination from "../components/Pagination";
+import DashboardCardSkeleton from "../components/DashboardCardSkeleton";
+
+import ChartSkeleton from "../components/ChartSkeleton";
+
+import TransactionTableSkeleton from "../components/TransactionTableSkeleton";
 
 type DashboardPageProps = {
   theme: "light" | "dark";
@@ -28,11 +33,22 @@ const DashboardPage = ({ theme, toggleTheme }: DashboardPageProps) => {
     editTransaction,
   } = useTransactions();
 
+  const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortOption, setSortOption] = useState("date-desc");
   const [currentPage, setCurrentPage] = useState(1);
   const ITEMS_PER_PAGE = 5;
+
+  // Timeout for skeletons
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     setCurrentPage(1);
   }, [searchTerm, selectedCategory, sortOption]);
@@ -116,30 +132,54 @@ const DashboardPage = ({ theme, toggleTheme }: DashboardPageProps) => {
       <div className="mx-auto max-w-7xl px-4 py-8">
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <section className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <DashboardCard
-            title="Total Balance"
-            amount={formatCurrency(totalBalance)}
-          />
-          <DashboardCard
-            title="Total Income"
-            amount={formatCurrency(totalIncome)}
-          />
-          <DashboardCard
-            title="Total Expense"
-            amount={formatCurrency(totalExpenses)}
-          />
-          <DashboardCard
-            title="Total Savings"
-            amount={formatCurrency(totalSavings)}
-          />
+          {isLoading ? (
+            <>
+              <DashboardCardSkeleton />
+              <DashboardCardSkeleton />
+              <DashboardCardSkeleton />
+              <DashboardCardSkeleton />
+            </>
+          ) : (
+            <>
+              <DashboardCard
+                title="Total Balance"
+                amount={formatCurrency(totalBalance)}
+              />
+              <DashboardCard
+                title="Total Income"
+                amount={formatCurrency(totalIncome)}
+              />
+              <DashboardCard
+                title="Total Expense"
+                amount={formatCurrency(totalExpenses)}
+              />
+              <DashboardCard
+                title="Total Savings"
+                amount={formatCurrency(totalSavings)}
+              />
+            </>
+          )}
         </section>
-        <section className="mt-8 grid gap-6 lg:grid-cols-2">
-          <ExpensePieChart transactions={transactions} />
-          <MonthlyExpenseChart transactions={transactions} />
-        </section>
-        <section className="mt-8">
-          <IncomeExpenseTrendChart transactions={transactions} />
-        </section>
+        {isLoading ? (
+          <section className="mt-8 grid gap-6 lg:grid-cols-2">
+            <ChartSkeleton />
+            <ChartSkeleton />
+          </section>
+        ) : (
+          <section className="mt-8 grid gap-6 lg:grid-cols-2">
+            <ExpensePieChart transactions={transactions} />
+            <MonthlyExpenseChart transactions={transactions} />
+          </section>
+        )}
+        {isLoading ? (
+          <section className="mt-8">
+            <ChartSkeleton />
+          </section>
+        ) : (
+          <section className="mt-8">
+            <IncomeExpenseTrendChart transactions={transactions} />
+          </section>
+        )}
         <TransactionForm
           key={editingTransaction?.id ?? "new"}
           editingTransaction={editingTransaction}
@@ -156,11 +196,15 @@ const DashboardPage = ({ theme, toggleTheme }: DashboardPageProps) => {
           onCategoryChange={setSelectedCategory}
         />
         <TransactionSort sortOption={sortOption} onSortChange={setSortOption} />
-        <TransactionTable
-          transactions={paginatedTransactions}
-          onDelete={deleteTransaction}
-          onEdit={editTransaction}
-        />
+        {isLoading ? (
+          <TransactionTableSkeleton />
+        ) : (
+          <TransactionTable
+            transactions={paginatedTransactions}
+            onDelete={deleteTransaction}
+            onEdit={editTransaction}
+          />
+        )}
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
