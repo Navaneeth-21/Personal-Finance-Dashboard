@@ -2,6 +2,10 @@
 
 A modern and responsive Personal Finance Dashboard built with React, TypeScript, Tailwind CSS, and Recharts. The application enables users to manage transactions, track income and expenses, visualize financial trends, and personalize their experience with persistent theme preferences.
 
+## 🎥 Demo
+
+![Mobile View](./Demo/20260626_185525.mp4)
+
 ## 🚀 Live Features
 
 ### Transaction Management
@@ -68,10 +72,10 @@ A modern and responsive Personal Finance Dashboard built with React, TypeScript,
 ## 📂 Project Structure
 
 <<<<<<< HEAD
+
+- # Included only main files
 - Included only main files
-=======
- - Included only main files
->>>>>>> 66f256e76e149eda93ed74668db8073bfe704572
+  > > > > > > > 66f256e76e149eda93ed74668db8073bfe704572
 
 ```text
 src
