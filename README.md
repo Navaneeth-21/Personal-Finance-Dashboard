@@ -4,7 +4,7 @@ A modern and responsive Personal Finance Dashboard built with React, TypeScript,
 
 ## 🎥 Demo
 
-![Mobile View](./Demo/20260626_185525.mp4)
+![Mobile View](./Demo/20260629_224637.mp4)
 
 ## 🚀 Live Features
 
