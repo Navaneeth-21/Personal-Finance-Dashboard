@@ -6,15 +6,13 @@ A modern and responsive Personal Finance Dashboard built with React, TypeScript,
 
 - Mobile View
 
-  <video src="./Demo/20260626_185525.mp4" controls="controls" style="max-width: 100%;">
-  Your browser does not support the video tag.
-  </video>
+https://github.com/user-attachments/assets/d600eb36-2d93-4eda-bd05-2c818507bab5
 
 - Desktop View & Features
 
-  <video src="./Demo/20260629_224126.mp4" controls="controls" style="max-width: 100%;">
-  Your browser does not support the video tag.
-  </video>
+https://github.com/user-attachments/assets/b29268b0-516b-4340-b292-05eba4dd63d2
+
+
 
 ## 🚀 Live Features
 
