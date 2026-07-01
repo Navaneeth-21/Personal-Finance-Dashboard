@@ -2,7 +2,7 @@
 
 A modern and responsive Personal Finance Dashboard built with React, TypeScript, Tailwind CSS, and Recharts. The application enables users to manage transactions, track income and expenses, visualize financial trends, and personalize their experience with persistent theme preferences.
 
-## 🎥 Demo
+## Demo
 
 - Mobile View
 
@@ -12,9 +12,7 @@ https://github.com/user-attachments/assets/d600eb36-2d93-4eda-bd05-2c818507bab5
 
 https://github.com/user-attachments/assets/b29268b0-516b-4340-b292-05eba4dd63d2
 
-
-
-## 🚀 Live Features
+## Live Features
 
 ### Transaction Management
 
@@ -79,11 +77,8 @@ https://github.com/user-attachments/assets/b29268b0-516b-4340-b292-05eba4dd63d2
 
 ## 📂 Project Structure
 
-<<<<<<< HEAD
-
 - # Included only main files
 - Included only main files
-  > > > > > > > 66f256e76e149eda93ed74668db8073bfe704572
 
 ```text
 src
@@ -123,7 +118,7 @@ src
 
 ---
 
-## 📊 Dashboard Metrics
+## Dashboard Metrics
 
 The dashboard automatically calculates:
 
@@ -145,7 +140,7 @@ Remaining amount after expenses.
 
 ---
 
-## 📈 Charts
+## Charts
 
 ### Expense Breakdown Pie Chart
 
@@ -161,7 +156,7 @@ Compares monthly income and expenses over time.
 
 ---
 
-## 🎨 Dark Mode
+## Dark Mode
 
 Users can switch between:
 
@@ -172,7 +167,7 @@ Theme preference is automatically persisted using LocalStorage.
 
 ---
 
-## 🔍 Search, Filter & Sort
+## Search, Filter & Sort
 
 ### Search
 
@@ -205,13 +200,13 @@ Sort transactions by:
 
 ---
 
-## 📄 Pagination
+## Pagination
 
 Transactions are paginated to improve performance and usability.
 
 ---
 
-## ⚡ Performance Optimizations
+## Performance Optimizations
 
 - Derived state instead of redundant state
 - Component-based architecture
@@ -222,7 +217,7 @@ Transactions are paginated to improve performance and usability.
 
 ---
 
-## 🏃 Getting Started
+## Getting Started
 
 ### Clone Repository
 
@@ -256,7 +251,7 @@ npm run build
 
 ---
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
 
 While building this project, the following concepts were implemented and practiced:
 
@@ -271,11 +266,3 @@ While building this project, the following concepts were implemented and practic
 - Reusable component design
 - User experience enhancements
 - Dashboard development patterns
-
----
-
-## 📬 Author
-
-Navaneeth Gade
-
-Aspiring Full Stack Developer focused on building scalable web applications using React, TypeScript, Node.js, and modern web technologies.
